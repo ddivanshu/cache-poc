@@ -1,0 +1,14 @@
+on:
+  release:
+    types: # This configuration does not affect the page_build event above
+      - created
+  jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: code-coverage-report
+        path: taskmulti.yaml
