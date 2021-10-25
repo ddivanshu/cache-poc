@@ -2,7 +2,7 @@ on:
   release:
     types: # This configuration does not affect the page_build event above
       - created
-  jobs:
+jobs:
   upload-artifact:
     runs-on: ubuntu-latest
     steps:
